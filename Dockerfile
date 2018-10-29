@@ -15,7 +15,8 @@ RUN apt-get update && \
 RUN apt-key adv --fetch-keys https://archive.cloudera.com/cdh5/ubuntu/xenial/amd64/cdh/archive.key \
       && echo deb [arch=amd64] http://archive.cloudera.com/cdh5/ubuntu/xenial/amd64/cdh xenial-cdh$CDH_VERSION contrib | tee -a /etc/apt/sources.list.d/cloudera.list \
       && echo deb [arch=amd64] http://archive.cloudera.com/cm5/ubuntu/xenial/amd64/cm xenial-cm$CDH_VERSION contrib | tee -a /etc/apt/sources.list.d/cloudera.list \
-      && echo deb-src http://archive.cloudera.com/cm5/ubuntu/xenial/amd64/cm xenial-cm$CDH_VERSION contrib | tee -a /etc/apt/sources.list.d/cloudera.list \
+      && echo deb-src http://archive.cloudera.com/cm5/ubuntu/xenial/amd64/cm xenial-cm$CDH_VERSION contrib | tee -a /etc/apt/sources.list.d/cloudera.list
+
 RUN apt-get update && \
       apt-get install -y --no-install-recommends \
               hadoop-client \
