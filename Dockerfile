@@ -27,9 +27,3 @@ RUN apt-get update && \
 
 # Link slf4j-simple.jar
 RUN ln -s /usr/share/java/slf4j-simple.jar /usr/lib/hadoop/lib/slf4j-simple.jar
-
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod 755 /entrypoint.sh
-
-ENTRYPOINT ["/entrypoint.sh"]
-CMD ["/bin/bash"]
